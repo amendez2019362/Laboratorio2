@@ -1,6 +1,15 @@
-const { response } = require('express');
-const bcryptjs = require('bcryptjs');
+const { response, json } = require('express');
 const Pet = require('../models/pet');
+
+const petPost = async (req, res) => {
+    const { nombre, edad, raza, peso, sexo } = req.body;
+    const pet = new Pet({ nombre, edad, raza, peso, sexo });
+
+    await pet.save();
+    res.status(200).json({
+        pet
+    });
+}
 
 const petGet = async (req, res = response) => {
     const { limite, desde } = req.query;
@@ -10,6 +19,7 @@ const petGet = async (req, res = response) => {
         Pet.countDocuments(query),
         Pet.find(query)
             .skip(Number(desde))
+            .limit(Number(limite))
     ]);
 
     res.status(200).json({
@@ -19,50 +29,37 @@ const petGet = async (req, res = response) => {
 }
 
 const getPetById = async (req, res) => {
-    const { id } = req.params;
-    const pet = await Pet.findOne({ _id: id });
+    const {id} = req.params;
+    const pet = await Pet.findOne({_id: id});
 
     res.status(200).json({
         pet
     });
 }
 
-const petPut = async (req, res) => {
-    const { id } = req.params;
-    const { _id, edad, raza, peso, ...resto } = req.body;
+const petPut = async (req, res) =>{
+    const {id} = req.params;
+    const { _id, nombre, edad, raza, ...resto} = req.body;
     const pet = await Pet.findByIdAndUpdate(id, resto);
 
     res.status(200).json({
-        msg: 'Datos de mascota actualizados'
+        msg: 'Mascota actualizada exitosamente'
     });
 }
 
 const petDelete = async (req, res) => {
-    const { id } = req.params;
-    const pet = await pet.findByIdAndUpdate(id, { estado: false });
+    const {id} = req.params;
+    const pet = await Pet.findByIdAndUpdate(id, {estado: false});
 
     res.status(200).json({
-        msg:'Mascota Eliminada'
-    });
-}
-
-const petPost = async(req, res) => {
-    const { nombre, edad, raza, peso, sexo } = req.body;
-    const pet = new pet({nombre, edad, raza, peso, sexo});
-
-    const salt = bcryptjs.genSaltSync();
-    pet.edad = bcryptjs.hashSync(edad, salt);
-
-    await pet.save();
-    res.status(200).json({
-        pet
+        msg: 'Mascota Eliminada'
     });
 }
 
 module.exports = {
     petPost,
-    petGet,
     getPetById,
+    petGet,
     petPut,
     petDelete
 }

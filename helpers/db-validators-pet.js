@@ -1,8 +1,8 @@
 const Pet = require('../models/pet');
 
 const existePetById = async (id = '') => {
-    const existePetById = await Pet.find({id});
-    if(existePetById){
+    const existePet = await Pet.find({id});
+    if(existePet){
         throw new Error(`La mascota con el ${id} no existe`);
     }
 }

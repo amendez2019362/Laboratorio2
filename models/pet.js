@@ -23,4 +23,4 @@ const PetSchema = Schema ({
     },
 });
 
-module.exports = model('Pet', PetSchema);
+module.exports = model('pet', PetSchema);
