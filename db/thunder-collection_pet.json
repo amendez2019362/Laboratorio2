@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "pet",
+    "dateExported": "2024-02-14T18:09:07.260Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3fe02c8f-8211-46ee-80c6-c04364ccb18a",
+            "colId": "a50a41ea-8dd6-4e91-8d9e-415ba642713f",
+            "containerId": "",
+            "name": "pet-post",
+            "url": "http://localhost:3000/api/pet",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-09T16:22:42.201Z",
+            "modified": "2024-02-09T18:03:58.811Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Luna55\",\n  \"edad\": \"10 años\", \n  \"raza\": \"Labrador Retreaver\",\n  \"peso\": \"10 kilogramos\",\n  \"sexo\": \"hembra\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "15f69586-00e5-48e3-adef-f6bd96428d8e",
+            "colId": "a50a41ea-8dd6-4e91-8d9e-415ba642713f",
+            "containerId": "",
+            "name": "petGet",
+            "url": "http://localhost:3000/api/pet",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-09T17:18:41.007Z",
+            "modified": "2024-02-09T17:59:54.295Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b782b6c3-42cb-420c-9601-a101427606ca",
+            "colId": "a50a41ea-8dd6-4e91-8d9e-415ba642713f",
+            "containerId": "",
+            "name": "getPetById",
+            "url": "http://localhost:3000/api/pet/65c6690ed3984a408b2bbfb0",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-09T17:41:35.504Z",
+            "modified": "2024-02-09T18:04:06.495Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fde5af32-cbb6-45a1-b0c7-d9490c6543c8",
+            "colId": "a50a41ea-8dd6-4e91-8d9e-415ba642713f",
+            "containerId": "",
+            "name": "petPut",
+            "url": "http://localhost:3000/api/pet/65c6690ed3984a408b2bbfb0",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-09T17:45:59.049Z",
+            "modified": "2024-02-09T18:04:45.905Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Angel\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0411124d-4367-4ffa-bf87-42e0826198e3",
+            "colId": "a50a41ea-8dd6-4e91-8d9e-415ba642713f",
+            "containerId": "",
+            "name": "petDelete",
+            "url": "http://localhost:3000/api/pet/65c6690ed3984a408b2bbfb0",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-02-09T17:51:32.803Z",
+            "modified": "2024-02-09T18:04:54.145Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

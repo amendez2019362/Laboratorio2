@@ -20,17 +20,17 @@ const usuariosGet = async (req, res = response) => {
 }
 
 const getUsuarioById = async (req, res) => {
-    const {id} = req.params;
-    const usuario = await Usuario.findOne({_id: id});
+    const { id } = req.params;
+    const usuario = await Usuario.findOne({ _id: id });
 
     res.status(200).json({
         usuario
     });
 }
 
-const usuariosPut = async (req, res) =>{
-    const {id} = req.params;
-    const { _id, password, google, correo, ...resto} = req.body;
+const usuariosPut = async (req, res) => {
+    const { id } = req.params;
+    const { _id, password, google, correo, ...resto } = req.body;
     const usuario = await Usuario.findByIdAndUpdate(id, resto);
 
     res.status(200).json({
@@ -39,8 +39,8 @@ const usuariosPut = async (req, res) =>{
 }
 
 const usuariosDelete = async (req, res) => {
-    const {id} = req.params;
-    const usuario = await Usuario.findByIdAndUpdate(id, {estado: false});
+    const { id } = req.params;
+    const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
 
     res.status(200).json({
         msg: 'Usuario Eliminado'
@@ -60,8 +60,6 @@ const usuariosPost = async (req, res) => {
         usuario
     });
 }
-
-
 
 module.exports = {
     usuariosPost,

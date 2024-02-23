@@ -23,7 +23,7 @@ router.get("/", petGet);
 router.get(
     "/:id",
     [
-        check("id", "Formano no valido para MongoDB").isMongoId(),
+        check("id", "Formano no valido").isMongoId(),
         check("id").custom(existePetById),
     ], getPetById);
 
@@ -40,5 +40,6 @@ router.delete(
         check("id", "El id no es un formato valido de MongoDB").isMongoId(),
         check("id").custom(existePetById),
     ], petDelete);
+
 
 module.exports = router;

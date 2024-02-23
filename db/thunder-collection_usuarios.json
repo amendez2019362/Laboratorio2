@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "usuarios",
+    "dateExported": "2024-02-14T18:09:27.521Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "54d9827b-da46-429d-a416-3615a23b5f24",
+            "colId": "aaa7dabd-7a7a-4e12-bc4f-f442645b1301",
+            "containerId": "",
+            "name": "usuarios-post",
+            "url": "http://localhost:3000/api/Usuarios",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-08T14:30:17.946Z",
+            "modified": "2024-02-09T16:27:07.685Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Sofia 123\",\n  \"correo\": \"smargarita@kinal.edu.gt\",\n  \"password\": \"123456\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ea2350a7-08fa-4fb3-826e-850ec3e511ee",
+            "colId": "aaa7dabd-7a7a-4e12-bc4f-f442645b1301",
+            "containerId": "",
+            "name": "usuariosGet",
+            "url": "http://localhost:3000/api/Usuarios",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-08T15:02:33.817Z",
+            "modified": "2024-02-08T20:52:36.295Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "fa081e16-653d-4988-8281-d6786b242ea6",
+            "colId": "aaa7dabd-7a7a-4e12-bc4f-f442645b1301",
+            "containerId": "",
+            "name": "getUsuarioById",
+            "url": "http://localhost:3000/api/Usuarios/65c53ee54c20c04fcce27258",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-08T15:29:21.513Z",
+            "modified": "2024-02-08T20:54:36.449Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4428a7c3-6a4c-4bd0-b72a-25fe99c58cf8",
+            "colId": "aaa7dabd-7a7a-4e12-bc4f-f442645b1301",
+            "containerId": "",
+            "name": "usuariosPut",
+            "url": "http://localhost:3000/api/Usuarios/65c53ee54c20c04fcce27258",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-08T15:40:16.790Z",
+            "modified": "2024-02-08T20:54:25.992Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Sofi Arriola\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e7f3f7a1-9514-4b42-9ea0-f58b95ba2719",
+            "colId": "aaa7dabd-7a7a-4e12-bc4f-f442645b1301",
+            "containerId": "",
+            "name": "usuariosDelete",
+            "url": "http://localhost:3000/api/Usuarios/65c53ee54c20c04fcce27258",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-08T15:50:35.007Z",
+            "modified": "2024-02-08T20:54:47.960Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
