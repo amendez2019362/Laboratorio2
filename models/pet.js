@@ -20,7 +20,7 @@ const PetSchema = Schema ({
     sexo:{
         type: String,
         require: [true, 'Sexo necesario']
-    },
+    }
 });
 
 module.exports = model('pet', PetSchema);
