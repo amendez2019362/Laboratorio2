@@ -8,6 +8,7 @@ class Server{
         this.app = express();
         this.port = process.env.PORT;
         this.usuariosPath = '/api/usuarios';
+        this.petParh = '/api/pet';
         this.conectarDB();
         this.middlewares();
         this.routes();
@@ -25,6 +26,8 @@ class Server{
 
     routes(){
         this.app.use(this.usuariosPath, require('../routes/user.routes'));
+        this.app.use(this.petPath, require('../routes/pet.routes'));
+
     }
 
     listen(){
